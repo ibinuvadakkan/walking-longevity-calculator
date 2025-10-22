@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walking Longevity Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="walking-calculator">
+        <h2>Walking Longevity Calculator</h2>
+        <p class="intro">Based on recent scientific research, this calculator estimates how much longer you could live by adding walking to your daily routine.</p>
+        
+        <div class="calculator">
+            <h3>Your Information</h3>
+            
+            <div class="form-group">
+                <label for="age">Your Current Age</label>
+                <input type="number" id="age" min="20" max="100" value="45">
+            </div>
+            
+            <div class="form-group">
+                <label for="activity">Current Activity Level</label>
+                <select id="activity">
+                    <option value="inactive">Inactive (mostly sedentary)</option>
+                    <option value="light">Light Activity (occasional walking)</option>
+                    <option value="moderate" selected>Moderate Activity (regular walking)</option>
+                    <option value="active">Active (regular exercise)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="walking">Daily Walking Minutes</label>
+                <div class="slider-container">
+                    <input type="range" id="walking" class="slider" min="0" max="180" value="30">
+                    <span id="walkingValue" class="slider-value">30 min</span>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="intensity">Walking Intensity</label>
+                <select id="intensity">
+                    <option value="light">Light (casual stroll)</option>
+                    <option value="brisk" selected>Brisk (3 mph / 100 steps per minute)</option>
+                    <option value="fast">Fast (power walking)</option>
+                </select>
+            </div>
+            
+            <button id="calculateBtn" class="btn">Calculate My Longevity Gain</button>
+        </div>
+        
+        <div id="results" class="results">
+            <h2>Your Potential Longevity Increase</h2>
+            <div class="result-value" id="yearsResult">2.3 years</div>
+            
+            <div class="result-details">
+                <div class="detail-item">
+                    <span class="detail-label">Current estimated lifespan:</span>
+                    <span class="detail-value" id="currentLifespan">82 years</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">With added walking:</span>
+                    <span class="detail-value" id="newLifespan">84.3 years</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Extra time gained:</span>
+                    <span class="detail-value" id="extraTime">2.3 years</span>
+                </div>
+            </div>
+            
+            <div class="comparison">
+                <h3>How Your Results Compare</h3>
+                <div class="comparison-item">
+                    <span>Light Walking (10 min/day):</span>
+                    <span>0.9-1.4 years gained</span>
+                </div>
+                <div class="comparison-item">
+                    <span>Brisk Walking (160 min/day):</span>
+                    <span>5+ years gained</span>
+                </div>
+                <div class="comparison-item">
+                    <span>Moderate Exercise (24 min/day):</span>
+                    <span>Risk of death halved</span>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Based on research from the British Journal of Sports Medicine and University of Leicester studies</p>
+            <p class="disclaimer">Note: This calculator provides estimates based on population studies. Individual results may vary.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
